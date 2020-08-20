@@ -1,20 +1,39 @@
+/* Whole Doc */
+body{
+    background: url(./bg.jpg) no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding-top: 300px;
+}
+
+/* Complete Player */
 #mp3_player{
-    width: 500px;
-    height: 60px;
-    background: #000;
+    width: 700px;
+    height: 115px;
+    border: #d63031 solid 5px;
+    background-color: rgb(223, 230, 233, 0.7);
+    border-radius: 40px;
     padding: 5px;
     margin: 50px auto;
 }
 
+/* Audio Player */
 #mp3_player > div > audio{
-    width: 500px;
-    background: #000;
+    width: 690px;
+    height: 30px;
+    background: #9b0505;
     float: left;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 5px 5px 0 5px;
 }
 
+/* Canvas */
 #mp3_player > canvas{
-    width: 500px;
-    height: 30px;
-    background: #002d3c;
+    width: 700px;
+    height: 80px;
+    background: rgb(9, 132, 227, 0.7);
     float: left;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
