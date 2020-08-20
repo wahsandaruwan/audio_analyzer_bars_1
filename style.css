@@ -3,11 +3,23 @@ body{
     background: url(./bg.jpg) no-repeat;
     background-position: top center;
     background-size: cover;
-    padding-top: 300px;
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d63031;
+    opacity: 0.5;
+    z-index: -1;
 }
 
 /* Complete Player */
 #mp3_player{
+    position: relative;
+    top: 300px;
     width: 700px;
     height: 115px;
     border: #d63031 solid 5px;

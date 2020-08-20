@@ -29,13 +29,29 @@ function frameLooper(){
     fbc_array = new Uint8Array(analyzer.frequencyBinCount);
     analyzer.getByteFrequencyData(fbc_array);
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
-    ctx.fillStyle = '#d63031'; // Color of bars
+    // List of Colors
+    var cls = ['#c0392b','#e74c3c','#d63031','#EA2027'];
     bars = 100;
     for(var i = 0; i < bars; i++){
+        //document.getElementById("overlay").style.background = getRandomColor();
+
+        //Generate a random color from the list
+        var random = Math.floor(Math.random() * cls.length);
+        ctx.fillStyle = cls[random];
         bar_x = i * 3;
-        bar_width = 2;
+        bar_width = 1.5;
         bar_height = -(fbc_array[i] / 2);
         // fillRect(x, y, width, height) //Explanation of the parameters below
         ctx.fillRect(bar_x, canvas.height, bar_width, bar_height);
     }
 }
+
+// randomColorGen() generates random colors for animated bars
+// function getRandomColor() {
+//     var letters = '0123456789ABCDEF';
+//     var color = '#';
+//     for (var i = 0; i < 6; i++) {
+//       color += letters[Math.floor(Math.random() * 16)];
+//     }
+//     return color;
+// }
